@@ -20,7 +20,7 @@
           <input type="text" name="pokemon" id="search-input" required />
           <button id="search-button">Search</button>
         </form>
-        <div class="output">
+        <div class="output" style="display: none">
           <div class="top-container">
             <div class="name-and-id">
               <h2 id="pokemon-name"></h2>
@@ -32,7 +32,13 @@
               <p>Height: <span id="height"></span></p>
             </div>
             <div id="sprite-container" class="sprite-container">
-              <img src="" alt="Pokemon sprite" id="pokemon-sprite" />
+              <img
+                src=""
+                alt="Pokemon sprite"
+                id="pokemon-sprite"
+                width="200"
+                height="150"
+              />
             </div>
             <div id="types"></div>
           </div>

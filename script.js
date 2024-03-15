@@ -1,5 +1,6 @@
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-button");
+const output = document.querySelector(".output");
 const pokeName = document.getElementById("pokemon-name");
 const id = document.getElementById("pokemon-id");
 const ability = document.getElementById("ability");
@@ -13,6 +14,64 @@ const defense = document.getElementById("defense");
 const specialAttack = document.getElementById("special-attack");
 const specialDefense = document.getElementById("special-defense");
 const speed = document.getElementById("speed");
+
+const getColorByType = (type) => {
+  switch (type) {
+    case "bug":
+      return "#1B4C27";
+      break;
+    case "dark":
+      return "#040706";
+      break;
+    case "dragon":
+      return "#448B95";
+      break;
+    case "electric":
+      return "#E3E32B";
+      break;
+    case "fairy":
+      return "#971944";
+      break;
+    case "fighting":
+      return "#994023";
+      break;
+    case "fire":
+      return "#AB2021";
+      break;
+    case "flying":
+      return "#4A677D";
+      break;
+    case "ghost":
+      return "#33336B";
+      break;
+    case "grass":
+      return "#127C3D";
+      break;
+    case "ground":
+      return "#A9702C";
+      break;
+    case "ice":
+      return "#86D2F5";
+      break;
+    case "poison":
+      return "#5E2D88";
+      break;
+    case "psychic":
+      return "#A12C6C";
+      break;
+    case "rock":
+      return "#48180B";
+      break;
+    case "steel":
+      return "#5F756D";
+      break;
+    case "water":
+      return "#1552E2";
+      break;
+    default:
+      return "#75515B";
+  }
+};
 
 async function getPokemon(e) {
   e.preventDefault();
@@ -42,6 +101,7 @@ async function getPokemon(e) {
       speed: data.stats[5].base_stat,
     };
 
+    output.style.display = "flex";
     pokeName.textContent = `Name: ${pokemon.name
       .slice(0, 1)
       .toUpperCase()}${pokemon.name.slice(1)}`;
@@ -51,6 +111,7 @@ async function getPokemon(e) {
     height.textContent = pokemon.height;
     pokemonSprite.src = pokemon.sprite;
     types.textContent = `${pokemon.types[0].type.name.toUpperCase()}`;
+    types.style.backgroundColor = getColorByType(pokemon.types[0].type.name);
     hp.textContent = pokemon.hp;
     attack.textContent = pokemon.attack;
     defense.textContent = pokemon.defense;
