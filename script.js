@@ -106,6 +106,12 @@ async function getPokemon(e) {
       speed: data.stats[5].base_stat,
     };
 
+    if (pokemon.name === "koffing") {
+      const audio = new Audio("koffing/koffing.mp3");
+
+      audio.play();
+    }
+
     output.style.display = "flex";
     pokeName.textContent = `Name: ${pokemon.name
       .slice(0, 1)
@@ -117,6 +123,7 @@ async function getPokemon(e) {
     pokemonSprite.src = pokemon.sprite;
     types.textContent = `${pokemon.types[0].type.name.toUpperCase()}`;
     types.style.backgroundColor = getColorByType(pokemon.types[0].type.name);
+    types.style.color = "#39FF14";
     hp.textContent = pokemon.hp;
     attack.textContent = pokemon.attack;
     defense.textContent = pokemon.defense;
