@@ -76,6 +76,11 @@ const getColorByType = (type) => {
 async function getPokemon(e) {
   e.preventDefault();
   const pokemonName = searchInput.value.toLowerCase();
+
+  if (!pokemonName) {
+    alert("Please enter a pokemon name");
+  }
+
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
   try {
     const response = await fetch(url);

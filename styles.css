@@ -3,3 +3,90 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-image: url(img/poke-wallpaper.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: #e5e7eb;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container #search-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(27, 27, 50, 0.7);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.container label {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container #search-input {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5px;
+}
+
+.container #search-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+}
+
+.container #search-button:hover {
+  background-color: #0056b3;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
