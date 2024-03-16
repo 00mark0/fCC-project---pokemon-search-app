@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon Search App</title>
+    <link rel="icon" href="./img/pokeball.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,9 +29,11 @@
         </form>
         <div class="output" style="display: none">
           <div class="top-container">
-            <div class="name-and-id">
-              <h2 id="pokemon-name"></h2>
-              <p id="pokemon-id"></p>
+            <div class="desc">
+              <div class="name-and-id">
+                <h2 id="pokemon-name"></h2>
+                <p id="pokemon-id"></p>
+              </div>
               <p id="ability"></p>
             </div>
             <div class="size">
@@ -43,7 +46,7 @@
                 alt="Pokemon sprite"
                 id="pokemon-sprite"
                 width="200"
-                height="150"
+                height="200"
               />
             </div>
             <div id="types"></div>
@@ -52,8 +55,8 @@
             <table>
               <tbody>
                 <tr>
-                  <th>Base</th>
-                  <th>Stat</th>
+                  <th id="base">Base</th>
+                  <th id="stat">Stat</th>
                 </tr>
                 <tr>
                   <td>HP:</td>

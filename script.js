@@ -27,7 +27,7 @@ const getColorByType = (type) => {
       return "#448B95";
       break;
     case "electric":
-      return "#E3E32B";
+      return "#FFFF00";
       break;
     case "fairy":
       return "#971944";
@@ -117,7 +117,9 @@ async function getPokemon(e) {
       .slice(0, 1)
       .toUpperCase()}${pokemon.name.slice(1)}`;
     id.textContent = `ID: ${pokemon.id}`;
-    ability.textContent = `Ability: ${pokemon.ability}`;
+    ability.textContent = `Ability: ${pokemon.ability
+      .slice(0, 1)
+      .toUpperCase()}${pokemon.ability.slice(1)}`;
     weight.textContent = pokemon.weight;
     height.textContent = pokemon.height;
     pokemonSprite.src = pokemon.sprite;
