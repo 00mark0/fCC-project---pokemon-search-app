@@ -220,3 +220,51 @@ footer a:hover {
   border-radius: 5px;
   padding: 5px;
 }
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  body {
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .container #search-input {
+    width: 275px;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.8rem;
+  }
+  .container #search-input {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1800px) {
+  body {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .container #search-input {
+    width: 325px;
+  }
+}
+
+@media only screen and (min-width: 1801px) {
+  body {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .container #search-input {
+    width: 350px;
+  }
+}
