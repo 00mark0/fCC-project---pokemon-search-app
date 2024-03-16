@@ -97,7 +97,7 @@ async function getPokemon(e) {
       weight: data.weight,
       height: data.height,
       sprite: data.sprites.front_default,
-      types: data.types,
+      types: data.types.map((type) => type.type.name),
       hp: data.stats[0].base_stat,
       attack: data.stats[1].base_stat,
       defense: data.stats[2].base_stat,
@@ -112,6 +112,17 @@ async function getPokemon(e) {
       audio.play();
     }
 
+    types.innerHTML = "";
+
+    pokemon.types.forEach((type) => {
+      const typeElement = document.createElement("div");
+      typeElement.textContent = type.toUpperCase();
+      typeElement.style.backgroundColor = getColorByType(type);
+      typeElement.style.color = "#39FF14";
+      typeElement.id = "type";
+      types.appendChild(typeElement);
+    });
+
     output.style.display = "flex";
     pokeName.textContent = `Name: ${pokemon.name
       .slice(0, 1)
@@ -123,9 +134,6 @@ async function getPokemon(e) {
     weight.textContent = pokemon.weight;
     height.textContent = pokemon.height;
     pokemonSprite.src = pokemon.sprite;
-    types.textContent = `${pokemon.types[0].type.name.toUpperCase()}`;
-    types.style.backgroundColor = getColorByType(pokemon.types[0].type.name);
-    types.style.color = "#39FF14";
     hp.textContent = pokemon.hp;
     attack.textContent = pokemon.attack;
     defense.textContent = pokemon.defense;

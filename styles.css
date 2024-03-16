@@ -147,10 +147,14 @@ h1 {
 }
 
 #types {
+  display: flex;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#types #type {
   margin: 20px auto;
   padding: 5px 50px;
   border-radius: 10px;
-  font-family: "Ubuntu", sans-serif;
 }
 
 .bottom-container {
@@ -203,7 +207,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: auto;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   background-color: rgba(27, 27, 50, 0.7);
   font-size: 1rem;
