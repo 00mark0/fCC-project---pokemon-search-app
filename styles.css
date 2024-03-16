@@ -216,13 +216,6 @@ footer {
 footer a {
   color: #e5e7eb;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-footer a:hover {
-  background-color: #007bff;
-  border-radius: 5px;
-  padding: 5px;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
