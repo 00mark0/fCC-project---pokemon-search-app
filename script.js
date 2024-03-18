@@ -94,8 +94,8 @@ async function getPokemon(e) {
       name: data.name,
       id: data.id,
       ability: data.abilities[0].ability.name,
-      weight: data.weight,
-      height: data.height,
+      weight: data.weight / 10,
+      height: data.height / 10,
       sprite: data.sprites.front_default,
       types: data.types.map((type) => type.type.name),
       hp: data.stats[0].base_stat,
@@ -131,8 +131,8 @@ async function getPokemon(e) {
     ability.textContent = `Ability: ${pokemon.ability
       .slice(0, 1)
       .toUpperCase()}${pokemon.ability.slice(1)}`;
-    weight.textContent = pokemon.weight;
-    height.textContent = pokemon.height;
+    weight.textContent = `${pokemon.weight} kg`;
+    height.textContent = `${pokemon.height} m`;
     pokemonSprite.src = pokemon.sprite;
     hp.textContent = pokemon.hp;
     attack.textContent = pokemon.attack;
